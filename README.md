@@ -1,6 +1,6 @@
 Practical Cryptography Engineering
 ==================================
-This repository contains some practical code examples of using the following cryptograpy libraries:
+This repository contains some practical code examples of using the following cryptography libraries:
 * [libsodium](https://github.com/jedisct1/libsodium)
     * A modern, portable, easy to use crypto library written in C with a small number of high quality primitives
     * Focuses on making it easy to use cryptography correctly
@@ -25,7 +25,7 @@ File Contents
     * C code example of file-based AES-256 GCM, works with aesgcm_file.py
     * Takes arguments on command line and produces output to file
 * aesgcm_file.py
-    * Python code example of file-based ASES-256 GCM, works with aesgcm_file.c
+    * Python code example of file-based AES-256 GCM, works with aesgcm_file.c
 * CMakeLists.txt
     * CMake file for building the mbedTLS C code projects
 * ecdh.c
@@ -96,12 +96,12 @@ Where to learn more about cryptography
 Books
 -----
 
-* [Cryptograpy Engineering](https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246)
+* [Cryptography Engineering](https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246)
 by Niels Ferguson, Bruce Schneier, and Tadayoshi Kohno
     * Extremely well written and easy to understand
     * Focuses on the practical aspects that often result in weak crypto when used incorrectly
     * Discusses how to build an entire cryptographic system from the ground up
-* [Understading Cryptography](https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000)
+* [Understanding Cryptography](https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000)
 by Christof Paar, Jan Pelzl, and Bart Preneel
     * Amazing book which makes it relatively easy to teach yourself cryptography
     * [Website](http://www.crypto-textbook.com)
