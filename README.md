@@ -96,17 +96,20 @@ Where to learn more about cryptography
 Books
 -----
 
+* [Cryptograpy Engineering](https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246)
+by Niels Ferguson, Bruce Schneier, and Tadayoshi Kohno
+    * Extremely well written and easy to understand
+    * Focuses on the practical aspects that often result in weak crypto when used incorrectly
+    * Discusses how to build an entire cryptographic system from the ground up
 * [Understading Cryptography](https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000)
 by Christof Paar, Jan Pelzl, and Bart Preneel
-    * Amazing book which makes it relatively easy to teach yourself cryptography.
+    * Amazing book which makes it relatively easy to teach yourself cryptography
     * [Website](http://www.crypto-textbook.com)
     * YouTube lecture [videos](https://www.youtube.com/watch?v=2aHkqB2-46k&list=PL6N5qY2nvvJE8X75VkXglSrVhLv1tVcfy)
     * [Solutions](http://wiki.crypto.rub.de/Buch/en/download/Understanding_Cryptography_Odd_Solutions.pdf) Manual,
     Lecture [Slides](http://wiki.crypto.rub.de/Buch/en/slides.php)
-* [Cryptograpy Engineering](https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246)
-by Niels Ferguson, Bruce Schneier, and Tadayoshi Kohno
-    * Well written and easy to understand.  Focuses on the practical aspects that often result in weak crypto.
-Online Courses
+    
+Online Courses    
 --------------
 
 * [Cryptography I](https://www.coursera.org/learn/crypto)
