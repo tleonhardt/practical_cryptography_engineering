@@ -1,5 +1,35 @@
+Installing libsodium
+====================
+
+Before building these examples, you need to make sure libosdium is installed.
+
+Installing on macOS
+-------------------
+The easiest way to install on macOS is with Homebrew:
+
+```bash
+brew install libsodium
+xcode-select --install
+```
+
+Installing on Linux
+-------------------
+For any Linux distro which uses the **apt** package manager (Ubuntu, Debian, Mint, etc.), do the following:
+```bash
+sudo apt install libsodium-dev
+```
+
+Installing on Windows
+---------------------
+The easiest way to use libsodium on Windows is to use the [pre-built libraries](https://download.libsodium.org/doc/installation/).
+
+
+Building libsodium examples
+===========================
+These examples require CMake to be installed along with the platform default C compiler.
+
 Building on Windows
-===================
+-------------------
 
 On Windows, CMake generates a Visual Studio solution for either x86 or x64 (not both).  So in general you have to
 create two separate build folders.
