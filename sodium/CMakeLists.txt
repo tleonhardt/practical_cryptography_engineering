@@ -52,3 +52,14 @@ set(PYNACL_COMPAT_EXE test_pynacl_compatibility)
 add_executable(${PYNACL_COMPAT_EXE} ${PYNACL_COMPAT_SRC})
 target_link_libraries(${PYNACL_COMPAT_EXE} ${libs})
 
+set(SYMMETRIC_GENKEY_EXE symmetric_keygen)
+add_executable(${SYMMETRIC_GENKEY_EXE} ${SYMMETRIC_GEN_SRC})
+target_link_libraries(${SYMMETRIC_GENKEY_EXE} ${libs})
+
+set(SYMMETRIC_ENCRYPT_EXE symmetric_encrypt)
+add_executable(${SYMMETRIC_ENCRYPT_EXE} ${SYMMETRIC_ENCRYPT_SRC})
+target_link_libraries(${SYMMETRIC_ENCRYPT_EXE} ${libs})
+
+set(SYMMETRIC_DECRYPT_EXE symmetric_decrypt)
+add_executable(${SYMMETRIC_DECRYPT_EXE} ${SYMMETRIC_DECRYPT_SRC})
+target_link_libraries(${SYMMETRIC_DECRYPT_EXE} ${libs})
