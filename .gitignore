@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Python
+__pycache__
+*.pyc
+
+* CLion and/or PyCharm IDEs
+.idea
+cmake-build-debug
+
+# CMake
+build
