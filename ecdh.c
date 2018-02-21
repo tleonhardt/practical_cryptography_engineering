@@ -5,7 +5,7 @@
  *
  * Curve25519 is very fast, but only uses 256 bits (128 bits of security) even though it is highly respected as being
  * safe by pretty much everyone.  This curve is suitable for an asymmetric ECDH key exchange used to derive a 128-bit
- * key for use with a symmetric cipher such as AES-128.Python's Cryptography module doesn't have support for curve25519
+ * key for use with a symmetric cipher such as AES-128. Python's Cryptography module doesn't have support for curve25519
  * until version 2.0 and even then it only supports it with a bleeding-edge version of OpenSSL.
  *
  * Elliptic Curve SECP384R1 is a 384-bit NIST curve over a prime field.  This is a curve with intermediate performance
@@ -304,7 +304,7 @@ int main( int argc, char *argv[] )
     }
     mbedtls_printf( " ok\n" );
 
-    // TODO: Use a Key Derivation Function (KDF) to derive a 256-bit AES key from the 521-bit shared secret
+    // TODO: Use a Key Derivation Function (KDF) to derive a 256-bit AES key and an IV from the 521-bit shared secret
 
 
 exit:

@@ -25,7 +25,7 @@ to help you with making an AES key generator for your key.
 #define TAG_BYTES 16
 
 int main(void)
-{   
+{
     mbedtls_ctr_drbg_context ctr_drbg;
     mbedtls_entropy_context entropy;
     mbedtls_gcm_context gcm;
@@ -156,6 +156,5 @@ exit:
     // Free the GCM context and underlying cipher sub-context
     mbedtls_gcm_free(&gcm);
 
-    // TODO: Perform any cleanup of mbed TLS resources necessary
     return ret;
 }

@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 """
-This is a simple example of doing an elliptic curve Diffie-Hellman ECDH) key exchange.
-
-It allows two parties to jointly agree on a shared secret using an insecure channel.
-
-NOTE: Cryptography version 2.0 in combination with very new versions of OpenSSL support a simpler
-interface to use Curve25519 via from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
+This is a simple Key Derivation Function (KDF) example using Python's cryptography module.
 """
 import sys
 

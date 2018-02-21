@@ -10,8 +10,8 @@ the message as awell as authenticating it. Additional unencrypted data may also 
 Additional means of verifying integrity such as HMAC are not necessary.
 
 NOTE: There is a better way to do AES-GCM in Cryptography version 2.0 or newer using the AES-GCM construction which is
-composed of the AES block cipher utilizing GCM mode.  But Debian 9 comes with Cryptograhpy 1.7.
-The way presented here is compatible with both versions.
+composed of the AES block cipher utilizing GCM mode.  This version is intended to be compatible with version 1.7
+or newer of the Cryptography module.
 """
 import os
 

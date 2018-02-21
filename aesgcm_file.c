@@ -1,7 +1,8 @@
 /*
  * AES-256 file encryption program using Galois Counter Mode (GCM)
  *
- * It has been greatly simplified in the interests of readability at the cost of not being cross-platform compatible.
+ * It has been greatly simplified in the interests of readability at the cost of not necessarily being cross-platform
+ * compatible to ARM platforms.  Tis code is intended to work on Windows, macOS, and Linux.
  */
 #if !defined(MBEDTLS_CONFIG_FILE)
 #include "mbedtls/config.h"
@@ -402,7 +403,6 @@ exit:
 
     // Free the GCM context and underlying cipher sub-context
     mbedtls_gcm_free(&gcm_ctx);
-
 
     return( ret );
 

@@ -7,8 +7,9 @@
  * These routines use the XSalsa20 stream cipher for encryption and the Poly1305 MAC for authentication
  * in pre-packaged set of routines for doing authenticated encryption using symmetric keys.
  *
- * NOTE: This is NOT an AEAD (Authenticated Encryption with Additional Data) mode because the MAC computation
- * is done over the encrypted ciphertext and does not include any additional data.
+ * NOTE: While this is an AE (Authenticated Encryption) mode, this is NOT an AEAD (Authenticated Encryption with
+ Additional Data) mode because the MAC computation is just done over the encrypted ciphertext and does not include any
+ additional data.
  *
  * XSalsa20 is a stream cipher based upon Salsa20 but with a much longer nonce: 192 bits instead of 64 bits.
  *

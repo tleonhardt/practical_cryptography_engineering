@@ -9,7 +9,7 @@
  * v2.0, also published as Internet Engineering Task Force's RFC 2898.  It supercedes PBKDF1, which could only produce
  * keys up to 160 bits long.
  *
- * There are better KDF functions availble which address weaknesses in PBDKF2, but PBKDF2 is widely available in most
+ * There are better KDF functions available which address weaknesses in PBDKF2, but PBKDF2 is widely available in most
  * libraries.
  *
  * PBKDF2 applies a pseudorandom function, such as a hash-based message authentication code (HMAC), to the input

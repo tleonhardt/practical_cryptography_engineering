@@ -10,8 +10,7 @@ the message as well as authenticating it. Additional unencrypted data may also b
 Additional means of verifying integrity such as HMAC are not necessary.
 
 NOTE: There is a better way to do AES-GCM in Cryptography version 2.0 or newer using the AES-GCM construction which is
-composed of the AES block cipher utilizing GCM mode.  But Debian 9 comes with Cryptograhpy 1.7.
-The way presented here is compatible with both versions.
+composed of the AES block cipher utilizing GCM mode.  This should be compatible with Cryptograhpy 1.7 or newer.
 
 This is intended to be used in conjunction with teh "aesgcm_file.c" example code for demonstrating interoperability
 between Python's Cryptography module and the mbed TLS C library for AES-256 in GCM mode.
