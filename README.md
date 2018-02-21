@@ -2,11 +2,11 @@ Practical Cryptography Engineering
 ==================================
 This repository contains some practical code examples of using the following cryptograpy libraries:
 * [libsodium](https://github.com/jedisct1/libsodium)
-    * A modern, portable, easy to use crypto library written in C
-    * Focuses on providing a small number of high-quality, easy-to-use cryptographic primitives
+    * A modern, portable, easy to use crypto library written in C with a small number of high quality primitives
+    * Focuses on making it easy to use cryptography correctly
 * [mbedTLS](https://github.com/ARMmbed/mbedtls)
     * An ultra-portable crypto library written in C which should build anywhere
-    * Provides a wide range of cryptographic primitives
+    * Provides a wide range of the most common cryptographic primitives and associated infrastructure
 * [cryptography](https://github.com/pyca/cryptography)
     * Python's "standard" cryptographic library which is a wrapper around [OpenSSL](https://www.openssl.org)
     * Provides almost all cryptographic primitives you would want in Python
@@ -96,11 +96,22 @@ Where to learn more about cryptography
 Books
 -----
 
-* Understading Cryptography
-* Cryptograpy Engineering
-
+* [Understading Cryptography](https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000)
+by Christof Paar, Jan Pelzl, and Bart Preneel
+    * Amazing book which makes it relatively easy to teach yourself cryptography.
+    * [Website](http://www.crypto-textbook.com)
+    * YouTube lecture [videos](https://www.youtube.com/watch?v=2aHkqB2-46k&list=PL6N5qY2nvvJE8X75VkXglSrVhLv1tVcfy)
+    * [Solutions](http://wiki.crypto.rub.de/Buch/en/download/Understanding_Cryptography_Odd_Solutions.pdf) Manual,
+    Lecture [Slides](http://wiki.crypto.rub.de/Buch/en/slides.php)
+* [Cryptograpy Engineering](https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246)
+by Niels Ferguson, Bruce Schneier, and Tadayoshi Kohno
+    * Well written and easy to understand.  Focuses on the practical aspects that often result in weak crypto.
 Online Courses
 --------------
 
-* Coursera
-* Udacity
+* [Cryptography I](https://www.coursera.org/learn/crypto)
+    * Taught by Stanford University professor Dan Boneh
+    * Available for free on Coursera
+* [Applied Cryptography](https://www.udacity.com/course/applied-cryptography--cs387)
+    * Taught by University of Virginia professor Dave Evans
+    * Available for free on Udacity
