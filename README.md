@@ -162,3 +162,12 @@ Online Courses
 * [Applied Cryptography](https://www.udacity.com/course/applied-cryptography--cs387)
     * Taught by University of Virginia professor Dave Evans
     * Available for free on Udacity
+    
+    
+Disclaimer
+==========
+I am not an expert in cryptography.  I am just a software developer who wanted to learn more about how to use 
+cryptography effectively.  If anyone looking at this **is** an expert in cryptography and happens to notice any 
+weaknesses, inaccuracies, or mistakes and/or has constructive feedback for how to improve the examples then Pull 
+Requests or Issues would be sincerely appreciated.
+
