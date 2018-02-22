@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    // Buffer to hold the public key (verifying key)
+    // Buffer to hold the 32-byte public key (verifying key)
     unsigned char public_key[crypto_sign_PUBLICKEYBYTES];
 
-    // Buffer to hold the private key (signing key) - has extra info so public key can be derived
+    // Buffer to hold the 64-byte private key (signing key) - has extra info so public key can be derived
     unsigned char secret_key[crypto_sign_SECRETKEYBYTES];
 
 
@@ -104,6 +104,7 @@ int main(int argc, char *argv[])
     unsigned char signed_message[crypto_sign_BYTES + MESSAGE_LEN];
     unsigned long long signed_message_len;
 
+    // Sign the message by pre-pending a 64-byte digital signature
     printf("Signing a test message ...");
     crypto_sign(signed_message, &signed_message_len, MESSAGE, MESSAGE_LEN, secret_key);
     printf(" Done\n");

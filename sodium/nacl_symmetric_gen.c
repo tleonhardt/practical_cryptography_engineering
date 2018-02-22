@@ -99,10 +99,10 @@ int main(int argc, char *argv[])
     #define MESSAGE ((const unsigned char *) "test")
     #define MESSAGE_LEN 4
 
-    // In combined mode the authentication tag and the encrypted message are stored together
+    // In combined mode the authentication tag (16 bytes) and the encrypted message are stored together
     #define CIPHERTEXT_LEN (crypto_secretbox_MACBYTES + MESSAGE_LEN)
 
-    // XSalsa20 uses a 192-bit nonce
+    // XSalsa20 uses a 192-bit (24-byte) nonce
     unsigned char nonce[crypto_secretbox_NONCEBYTES];
     unsigned char ciphertext[CIPHERTEXT_LEN];
     unsigned char decrypted[MESSAGE_LEN+1]; // Extra byte so we can null terminate and use as a CString for display
