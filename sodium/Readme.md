@@ -75,14 +75,15 @@ API which is an [authenticated encryption](https://en.wikipedia.org/wiki/Authent
 primitive that combines an [XSalsa20](https://download.libsodium.org/doc/advanced/xsalsa20.html) 
 stream cipher with a [Poly1305](https://en.wikipedia.org/wiki/Poly1305) MAC.  This API is very easy to use and is 
 particularly suitable for use by newcomers to cryptography.  If you have need for authenticating additional data which 
-is transmitted in an unencrypted fashion, then you may prefer an AEAD primitive instead.
+is transmitted in an unencrypted fashion, then you may prefer an [AEAD](https://download.libsodium.org/doc/secret-key_cryptography/aead.html) 
+primitive instead.
 
 * nacl_symmetric_gen.c
     * Generates a random 256-bit (32-byte) secret symmetric key for use with the **secretbox** API
 * nacl_encrypt_file.c
-    * Encrypts a file using libsodium's **secretbox** secret-key authenticated encryption routines and adds a MAC of the ciphertext
+    * Encrypts a file using libsodium's **secretbox** secret-key routines and adds a MAC of the ciphertext
 * nacl_decrypt_file.c
-    * Authenticates and decrypts a ciphertext file encrypted using libsodium's **secretbox** secret-key encryption routines
+    * Authenticates and decrypts a ciphertext file encrypted using libsodium's **secretbox** encryption routines
 
 Public-key Digital Signatures
 -----------------------------
