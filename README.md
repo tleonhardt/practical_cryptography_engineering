@@ -23,13 +23,17 @@ Build-related and Miscellaneous
 * CMakeLists.txt
     * CMake file for building the mbedTLS C code projects
 * mbedtls
-       * Directory containing the mbedTLS C code
+    * Directory containing the mbedTLS C code
 * sodium
     * Directory containing libsodium examples, headers, and Windows pre-compiled library
     * See the Readme.md in this directory for more info on these examples
     
 Symmetric Encryption
 --------------------
+These code examples use an [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) block cipher with a 256-bit 
+key in [Galois Counter Mode](https://en.wikipedia.org/wiki/Galois/Counter_Mode) (GCM).  The C code examples use the 
+mbedTLS library, while the Python examples use the cryptography module.
+
 * aes_gcm.c
     * Simple self-contained C code example of using AES-256 in Galois Counter Mode (GCM) using hard-coded everything
 * aes_gcm_cryptography.py
@@ -39,9 +43,19 @@ Symmetric Encryption
     * Takes arguments on command line and produces output to file
 * aesgcm_file.py
     * Python code example of file-based AES-256 GCM, works with aesgcm_file.c
+
+The following example uses the PyNaCl wrapper around libsodium along with the **SecretBox** authenticated
+encryption API.
+* nacl_symmetric_gen.py
+    * Generates a random 256-bit (32-byte) secret symmetric key and saves it to a file
+    * Then uses it to encrypt a fixed message and verify that it can decrypt it and get the same message
     
 Key Exchange
 ------------
+These code examples use an Elliptic-curve Diffie-Hellman [ECDH](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie–Hellman)
+key agreement protocol to establish a shared secret over an insecure channel.  The C code examples use the mbedTLS 
+library, while the Python examples use the cryptography module.
+
 * ecdh.c
     * Elliptic Curve Diffie-Hellman key exchange C code example
 * ecdh.py
@@ -49,6 +63,9 @@ Key Exchange
     
 Key Derivation
 --------------
+These code examples demonstrate how to use a Key Derivation Function [KDF](https://en.wikipedia.org/wiki/Key_derivation_function)
+to derive one or more shared keys from a shared secret.
+
 * kdf.c
     * Key Derivation Function (KDF) C code example
 * kdf.py
@@ -56,6 +73,17 @@ Key Derivation
     
 Digital Signatures
 ------------------
+These examples use the PyNaCl wrapper around libsodium to support public-key digital signatures using the Ed25519 algorithm.
+
+* nacl_genkey.py
+    * Generates a random ed25519 SigningKey/VerifyingKey key pair for use with a digital signature system 
+* nacl_sign.py
+    * Uses PyNaCl to sign a message using ed25519 digital signature algorithm
+* nacl_verify.py
+    * Uses PyNaCl  to verify an ed25519 signature for a given message
+
+These examples use RSA-PSS digital signatures.  The C code examples use the mbedTLS library, while the Python examples 
+use the cryptography module.
 * rsa_signature.c
     * RSA Signature C code example
 * rsa_signature.py
