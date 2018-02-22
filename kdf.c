@@ -5,8 +5,8 @@
  * mbedtls_pkcs5_pbkdf2_hmac() function in the pkcs5.h/.c files.
  *
  * PBDKF2 is a KDF with sliding computation cost aimed to reduce the vulnerability of encrypted keys to brute force
- * attacks.  PBKDF2 is part of RSA Laboratorie's Public-Key Cryptography Standards (PKCS) series, specifically PKCS#5
- * v2.0, also published as Internet Engineering Task Force's RFC 2898.  It supercedes PBKDF1, which could only produce
+ * attacks.  PBKDF2 is part of RSA Laboratory's Public-Key Cryptography Standards (PKCS) series, specifically PKCS#5
+ * v2.0, also published as Internet Engineering Task Force's RFC 2898.  It supersedes PBKDF1, which could only produce
  * keys up to 160 bits long.
  *
  * There are better KDF functions available which address weaknesses in PBDKF2, but PBKDF2 is widely available in most

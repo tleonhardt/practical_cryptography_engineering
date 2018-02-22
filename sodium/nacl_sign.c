@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     if (sodium_init() < 0)
     {
         /* panic! the library couldn't be initialized, it is not safe to use */
-        printf("ERROR: The sodium library couldn't be initialied!\n");
+        printf("ERROR: The sodium library couldn't be initialized!\n");
         return EXIT_FAILURE;
     }
 
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
     printf("Message is %llu bytes: %s\n", message_len, (char*)message);
 
 
-    // Sign the message in combined mode where a signed message is generaed (including message)
+    // Sign the message in combined mode where a signed message is generated (including message)
     unsigned long long actual_len = 0;
     printf("Signing the message ...");
     ret = crypto_sign(signed_message, &actual_len, message, message_len, secret_key);

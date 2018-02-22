@@ -45,7 +45,7 @@ if __name__ == '__main__':
     with open(input_filename, 'rb') as msg_file:
         msg = msg_file.read()
 
-    # Sign a message with the signing key - this also containes the original message at the end
+    # Sign a message with the signing key - this also contains the original message at the end
     sig = signing_key.sign(msg)
 
     # Save the signature to an output file

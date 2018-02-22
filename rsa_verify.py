@@ -14,7 +14,7 @@
  *  - signature has been saved to filename.sig where "filename" is the complete input filename
  *
  * Notes:
- *  This uses the Probabilisitc Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
+ *  This uses the Probabilistic Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
 """
 import sys
 import traceback

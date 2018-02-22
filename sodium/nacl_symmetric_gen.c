@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     if (sodium_init() < 0)
     {
         /* panic! the library couldn't be initialized, it is not safe to use */
-        printf("ERROR: The sodium library couldn't be initialied!\n");
+        printf("ERROR: The sodium library couldn't be initialized!\n");
         return EXIT_FAILURE;
     }
 

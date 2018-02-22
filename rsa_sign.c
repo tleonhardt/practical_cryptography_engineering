@@ -12,7 +12,7 @@
  *  - filename.sig - signature is saved to filename.sig where "filename" is the complete input filename
  *
  * Notes:
- *  This uses the Probabilisitc Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
+ *  This uses the Probabilistic Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
@@ -56,7 +56,7 @@ int main( void )
 
 
 // Set RSA padding scheme, use PKCS_V21 for PKCS#1 v2.1 PSS probabilistic signatures or PKCS_V15 for older PKCS#1 v1.5
-// The RSA Probabilisitc Signature Scheme (PSS) should be used since it is more secure.
+// The RSA Probabilistic Signature Scheme (PSS) should be used since it is more secure.
 // However, some older encryption libraries only support the older deterministic PKCS#1 v.15 scheme
 //#define RSA_PADDING MBEDTLS_RSA_PKCS_V21
 #define RSA_PADDING MBEDTLS_RSA_PKCS_V15

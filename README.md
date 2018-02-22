@@ -17,6 +17,19 @@ This repository contains some practical code examples of using the following cry
 
 File Contents
 =============
+
+Build-related and Miscellaneous
+-------------------------------
+* CMakeLists.txt
+    * CMake file for building the mbedTLS C code projects
+* mbedtls
+       * Directory containing the mbedTLS C code
+* sodium
+    * Directory containing libsodium examples, headers, and Windows pre-compiled library
+    * See the Readme.md in this directory for more info on these examples
+    
+Symmetric Encryption
+--------------------
 * aes_gcm.c
     * Simple self-contained C code example of using AES-256 in Galois Counter Mode (GCM) using hard-coded everything
 * aes_gcm_cryptography.py
@@ -26,24 +39,27 @@ File Contents
     * Takes arguments on command line and produces output to file
 * aesgcm_file.py
     * Python code example of file-based AES-256 GCM, works with aesgcm_file.c
-* CMakeLists.txt
-    * CMake file for building the mbedTLS C code projects
+    
+Key Exchange
+------------
 * ecdh.c
     * Elliptic Curve Diffie-Hellman key exchange C code example
 * ecdh.py
     * Elliptic Curve Diffie-Hellman key exchange Python code example
+    
+Key Derivation
+--------------
 * kdf.c
     * Key Derivation Function (KDF) C code example
 * kdf.py
     * Key Derivation Function (KDF) Python code example
-* mbedtls
-    * Directory containing the mbedTLS C code
+    
+Digital Signatures
+------------------
 * rsa_signature.c
     * RSA Signature C code example
 * rsa_signature.py
     * RSA Signature Python code example
-* sodium
-    * Directory containing libsodium examples, headers, and Windows pre-compiled library
 
 
 Building

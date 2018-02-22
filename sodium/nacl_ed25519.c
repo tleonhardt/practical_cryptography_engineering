@@ -1,4 +1,4 @@
-/* Round trip unit test of using libsodiums Ed25519 digtial signature code.
+/* Round trip unit test of using libsodium's Ed25519 digital signature code.
  *
  * 1) Generates a random Ed25519 Secret(signing)/Public(verifying) key pair using libsodium
  * 2) Signs a test message
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     if (sodium_init() < 0)
     {
         /* panic! the library couldn't be initialized, it is not safe to use */
-        printf("ERROR: The sodium library couldn't be initialied!\n");
+        printf("ERROR: The sodium library couldn't be initialized!\n");
         return EXIT_FAILURE;
     }
 

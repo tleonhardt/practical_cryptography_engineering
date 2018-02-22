@@ -14,7 +14,7 @@
  *  - filename.sig - signature is saved to filename.sig where "filename" is the complete input filename
  *
  * Notes:
- *  This uses the Probabilisitc Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
+ *  This uses the Probabilistic Signature Scheme (PSS) standardized as part of PKCS#1 v2.1 along with SHA-512 hashes.
 """
 import sys
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     # Instantiate an instance of AsymmetricPadding to use
     if RSA_PADDING == PSS_PADDING:
-        # PKCS#1 v2.1 probabilistic padding sheme (PSS)
+        # PKCS#1 v2.1 probabilistic padding scheme (PSS)
         padding = padding.PSS(mgf=padding.MGF1(hashes.SHA512()),  # A mask generation function object
                               salt_length=padding.PSS.MAX_LENGTH)  # The length of the salt
     else:

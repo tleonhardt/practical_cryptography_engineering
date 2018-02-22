@@ -18,7 +18,7 @@ int main(void)
     if (sodium_init() < 0)
     {
         /* panic! the library couldn't be initialized, it is not safe to use */
-        printf("ERROR: The sodium library couldn't be initialied!\n");
+        printf("ERROR: The sodium library couldn't be initialized!\n");
         ret = 1;
     }
     else
