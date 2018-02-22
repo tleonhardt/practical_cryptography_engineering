@@ -65,8 +65,8 @@ int main(int argc, char *argv[])
     char hex_key[KEY_HEX_BYTES];
 
     // Create a random key - equivalent to calling randombytes_buf() but improves code clarity
-//    crypto_secretbox_keygen(key);   // Function added in libsodium version 1.12
-    randombytes_buf(key, crypto_secretbox_KEYBYTES);
+    crypto_secretbox_keygen(key);   // Function added in libsodium version 1.12
+//    randombytes_buf(key, crypto_secretbox_KEYBYTES);
 
     // Convert the binary key into a hexadecimal string
     sodium_bin2hex(hex_key, KEY_HEX_BYTES, key, crypto_secretbox_KEYBYTES);

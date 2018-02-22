@@ -137,7 +137,7 @@ int main(int argc, char *argv[])
         printf("ERROR: Authenticated ciphertext file is too small to contain a nonce and a MAC\n");
     }
 
-    // The 192-bit nonce doesn't have to be confidential, so it was stored in the ciphertext file first unencrypted
+    // The 192-bit (24-byte) nonce doesn't have to be secret, so it was stored in the ciphertext file first unencrypted
     unsigned char nonce[crypto_secretbox_NONCEBYTES];
 
     // Allocate buffers big enough to hold the message and the authenticated ciphertext
@@ -155,7 +155,7 @@ int main(int argc, char *argv[])
         goto exit;
     }
 
-    // Read in the authenticated ciphertext from the file
+    // Read in the authenticated ciphertext from the file (ciphertext + 16-byte authentication tag)
     bytes_read = fread( ciphertext, 1, ciphertext_len, file_cipher );
     if( ciphertext_len != bytes_read )
     {

@@ -152,15 +152,15 @@ int main(int argc, char *argv[])
     printf("Message is %llu bytes: %s\n", message_len, (char*)message);
 
 
-    // The 192-bit nonce doesn't have to be confidential, but it should never ever be reused with the same key
+    // The 192-bit (24-byte) nonce doesn't have to be confidential, but it should never ever be reused with the same key
     unsigned char nonce[crypto_secretbox_NONCEBYTES];
     randombytes_buf(nonce, sizeof nonce);
 
-    // Encrypts a message with a key and a nonce in combined mode
+    // Encrypts a message with key and nonce in combined mode where the ciphertext and a 16-byte tag are stored together
     printf("Encrypting message and computing an authentication tag ...");
     ret = crypto_secretbox_easy(ciphertext, message, message_len, nonce, key);
     if ( ret != 0)
-    {   // The only I can see for this function to fail is if the message length is too large (> 2^64 - 16)
+    {   // The only way I can see for this function to fail is if the message length is too large (> 2^64 - 16)
         printf(" failed.  Message length = %lld\n", message_len);
     }
     printf(" Done\n");
@@ -175,7 +175,7 @@ int main(int argc, char *argv[])
         goto exit;
     }
 
-    // Save the nonce to the authenticated ciphertext file first (unencrypted)
+    // Save the 24-byte (192-bit) nonce to the authenticated ciphertext file first (unencrypted)
     size_t bytes_written = fwrite( nonce, 1, crypto_secretbox_NONCEBYTES, file_cipher );
     if( crypto_secretbox_NONCEBYTES != bytes_written )
     {
