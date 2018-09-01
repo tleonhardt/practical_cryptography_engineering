@@ -163,6 +163,12 @@ Online Courses
     * Taught by University of Virginia professor Dave Evans
     * Available for free on Udacity
     
+   
+Presentation
+------------
+This repository includes the following basic intro presentation:
+* [Practical Cryptography Engineering](https://github.com/tleonhardt/practical_cryptography_engineering/blob/master/Practical_Cryptography_Engineering.pdf)
+    
     
 Disclaimer
 ==========
