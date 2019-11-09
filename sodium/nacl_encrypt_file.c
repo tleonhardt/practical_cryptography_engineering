@@ -15,6 +15,12 @@
  * Like Salsa20, XSalsa20 is immune to timing attacks and provides its own 64-bit block counter to avoid incrementing
  * the nonce after each block. But with XSalsa20's longer nonce, it is safe to generate nonces using randombytes_buf()
  * for every message encrypted with the same key without having to worry about a collision.
+ *
+ * WARNING:
+ *  This example encrypts the entire file in one shot and only works when everything can fit in your computer's RAM.
+ *  For very large files which cannot fit in your computer's memory, then stream-based encryption is required; for more
+ *  info see the following:
+ *  https://download.libsodium.org/doc/secret-key_cryptography/secretstream#file-encryption-example-code
  */
 
 // A project using libsodium should include the sodium.h header.
@@ -136,6 +142,8 @@ int main(int argc, char *argv[])
     // Allocate buffers big enough to hold the message and the authenticated ciphertext
     unsigned long long message_len = filesize;
     unsigned long long ciphertext_len = crypto_secretbox_MACBYTES + message_len;
+
+    // WARNING: This code makes the assumption that the file can fit in memory and doesn't check for malloc failure
     message = (unsigned char*)malloc(message_len + 1);
     ciphertext = (unsigned char*)malloc(ciphertext_len + 1);
 
@@ -160,7 +168,7 @@ int main(int argc, char *argv[])
     printf("Encrypting message and computing an authentication tag ...");
     ret = crypto_secretbox_easy(ciphertext, message, message_len, nonce, key);
     if ( ret != 0)
-    {   // The only way I can see for this function to fail is if the message length is too large (> 2^64 - 16)
+    {   // This can fail if the message is too large to fit in your computer's memory
         printf(" failed.  Message length = %lld\n", message_len);
     }
     printf(" Done\n");

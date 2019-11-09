@@ -5,8 +5,16 @@ project("hello_sodium" C)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O2 -Wall")
 
+# Set the CMAKE_MODULE_PATH so it can find the Findsodium.cmake file
+set(CMAKE_MODULE_PATH
+        "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+        ${CMAKE_MODULE_PATH})
+
 # Projects which statically link Sodium in Visual Studio must define a macro named SODIUM_STATIC
 add_definitions(-DSODIUM_STATIC)
+
+# Find where libsodium is installed (prevent linker errors)
+find_package(sodium REQUIRED)
 
 # Tell CMake where to look for header files
 include_directories(${CMAKE_SOURCE_DIR}/include)

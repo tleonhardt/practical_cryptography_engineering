@@ -93,6 +93,81 @@ use the cryptography module.
 Building
 ========
 
+libsodium C examples
+--------------------
+
+The [libsodium](https://download.libsodium.org/doc/) C code examples are all in the **sodium** directory and can be 
+built using the [Cmake](https://cmake.org) cross-platform build tool along with your platform default C compiler
+installed on Windows, macOS, or Linux.
+
+The first stage of building is the same on all platforms:
+
+```bash
+cd sodium
+rm -rf build
+mkdir build
+cd build
+cmake ..
+```
+
+The second stage of building is platform dependent and will create the following executable files:
+
+* hello_sodium
+* nacl_keygen
+* nacl_sign
+* nacl_verify
+* symmetric_decrypt
+* symmetric_encrypt
+* symmetric_keygen
+* test_ed25519
+* test_pynacl_compatibility
+
+### Linux or macOS
+```bash
+make
+```
+
+This produces the  executable files directly in the **build** directory.
+
+### Windows
+```bash
+devenv hello_sodium.sln /build Debug
+```
+This creates the executable files under the **build\Debug** directory.
+
+Python examples
+---------------
+
+The Python examples are located in the root directory and should work with Python 3.4 or newer.  The Python examples 
+require a mix of the following Python packages:
+
+* [cryptography](https://cryptography.io/en/latest/) - high-level wrapper around [OpenSSL](https://www.openssl.org)
+* [pynacl](https://pynacl.readthedocs.io/en/stable/) - Python binding to [libsodium](https://libsodium.org)
+* [colorama](https://github.com/tartley/colorama) - cross-platform colored terminal text
+
+The required dependencies can easily be installed using [Pipenv](https://github.com/pypa/pipenv):
+```shell script
+pipenv install
+```
+
+Then a shell using the underlying virtual environment can be entered with:
+```shell script
+pipenv shell
+```
+
+Inside that Pipenv shell, any of the examples can be ran directly. e.g.:
+```shell script
+python ./aes_gcm_cryptography.py
+```
+
+The Python examples are intended to interoperate with either the libsodium or mbedTLS C code examples.  Thus encryption
+or signing can be done in C and decryption or verifying can be done in Python or vice versa.
+
+mbedtls C examples
+------------------
+The [mbedTLS](https://github.com/ARMmbed/mbedtls) C code examples are located in the root directory and build mbedTLS
+from source from the **mbedtls** directory.
+
 Build requires CMake and platform default C compiler installed and works on both Windows, macOS, and Linux.
 
 The first stage of building is the same on all platforms:
@@ -106,8 +181,7 @@ cmake ..
 
 The second stage of building is platform dependent ...
 
-Linux or macOS
---------------
+### Linux or macOS
 ```bash
 make
 ```
@@ -120,8 +194,7 @@ This produces the following executable files directly in the **build** directory
 * kdf
 * rsa_signature
 
-Windows
--------
+### Windows
 ```bash
 devenv mbed_AES.sln /build Debug
 ```
