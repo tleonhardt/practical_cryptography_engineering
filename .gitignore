@@ -54,6 +54,8 @@ dkms.conf
 # Python
 __pycache__
 *.pyc
+.venv
+Pipfile.lock
 
 * CLion and/or PyCharm IDEs
 .idea
